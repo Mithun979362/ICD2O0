@@ -2,8 +2,12 @@ package assigment1;
 import java.util.Scanner;
 import java.lang.Math.*;
 /**
- *
- * @author 979362
+/*
+Mithun Kumar Arunkumar 979362
+Date: 9/26/2024
+Course: Grade 10 Comp Sci
+Title: Assignment 1 
+Description: A program which outputs a series of numbers based on an algorithm.
  */
 public class finalassignment1 {
     /* Variable dictionary
