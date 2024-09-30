@@ -91,7 +91,7 @@ public class Assigment1 {
         System.out.printf("%.2f", sacyl);//prints the surface area to 2 decimals
         //goes to new line and prints
         System.out.println("\nNow, I am going to calculate the time it takes for a pendulum to swing a distance ");
-        System.out.print("Enter the distance the pendulum travels in meters: ");//prints
+        System.out.print("Enter the length of the pendulum in meters: ");//prints
         double dist = scanner.nextDouble();//takes input and saves as variable
         double twopi=(double) (Math.PI*2);//multiplies Pi times 2
         double grav=(double) 9.8;//saves the gravity accel as a variable
@@ -99,7 +99,7 @@ public class Assigment1 {
         double sqrt=(double) (Math.sqrt(distovergrav));//takes the square root of distance/gravity   
         double p=(twopi*sqrt);//multiplies the square root of distance/gravity by pi*2
         //prints
-        System.out.print("The time the pendulum takes to swing your distance in seconds is: "+ " ");
+        System.out.print("The time the pendulum takes to swing in seconds is: "+ " ");
         System.out.printf("%.2f", p);//prints the time to 2 decimals
         System.out.print("\nThanks for using my calculator");//prints
     }
