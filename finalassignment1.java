@@ -50,10 +50,10 @@ public class Assigment1 {
         System.out.println("First, I am going to calculate the area of a rectangle");
         //prints to tell the user to enter the length of a rectangle in meters
         System.out.print("Enter The length of the rectangle in meters: ");
-        double Lengthrec = scanner.nextInt();//takes the input of the user as a variable
+        double Lengthrec = scanner.nextDouble();//takes the input of the user as a variable
         //prints to tell the user to enter the width of a rectangle in meters
         System.out.print("Enter the width of the rectangle in meters: ");
-        double Widthrec = scanner.nextInt();//takes the input of the user as a variable
+        double Widthrec = scanner.nextDouble();//takes the input of the user as a variable
         //multiplies the two to get the area and make it as a variable
         double arearec=(Widthrec*Lengthrec);
         //prints the area of the rectangle and leaves cursor on same line
@@ -63,7 +63,7 @@ public class Assigment1 {
         //goes to new line and prints and moves cursor to next line
         System.out.println("\nNow, I am going to calculate the area of a circle");
         System.out.print("Enter the radius of the circle:"); //prints and leaves cursor on line
-        double rad = scanner.nextInt();//takes user input and saves it as a variable
+        double rad = scanner.nextDouble();//takes user input and saves it as a variable
         double radsquare = rad*rad;//squares the radius and saves it as a variable
         //Multiplies the radius squared times PI and saves it as a variable
         double ac= (double) (radsquare* Math.PI);
@@ -72,9 +72,9 @@ public class Assigment1 {
         //moves to a new line,prints ,and moves cursor to next line
         System.out.println("\nNow, I am going to calculate the Volume and the surface area of a cylinder");
         System.out.print("Enter the radius of the cylinder: ");//Prints and leaves cursor
-        double radcyl = scanner.nextInt();//Takes user input and saves as variable
+        double radcyl = scanner.nextDouble();//Takes user input and saves as variable
         System.out.print("Enter the height of the cylinder: ");//prints and leaves cursor
-        double heightcyl = scanner.nextInt();//takes user input and saves as variable
+        double heightcyl = scanner.nextDouble();//takes user input and saves as variable
         double radcylsquare= (radcyl*radcyl);//squares the radius
         //multiplies the radius^2 times pi
         double piradcylsquare=(float) (radcylsquare*Math.PI);
@@ -92,7 +92,7 @@ public class Assigment1 {
         //goes to new line and prints
         System.out.println("\nNow, I am going to calculate the time it takes for a pendulum to swing a distance ");
         System.out.print("Enter the distance the pendulum travels in meters: ");//prints
-        double dist = scanner.nextInt();//takes input and saves as variable
+        double dist = scanner.nextDouble();//takes input and saves as variable
         double twopi=(double) (Math.PI*2);//multiplies Pi times 2
         double grav=(double) 9.8;//saves the gravity accel as a variable
         double distovergrav=(dist/grav);//divide the distance by the gravity
