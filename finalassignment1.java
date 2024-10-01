@@ -10,7 +10,7 @@ import java.lang.Math.*;
  *
  * @author 979362
  */
-public class Assigment1 {
+public class finalassignment1 {
     /* Variable dictionary
     Lengthrec-Length of rectangle
     Widthrec-Width of rectangle
@@ -59,7 +59,7 @@ public class Assigment1 {
         //prints the area of the rectangle and leaves cursor on same line
         System.out.print("The area of the rectangle is: ");
         //print the area of the rectangle with 2 decimal places
-        System.out.printf("%.2f", arearec);
+        System.out.printf("%,.2f", arearec);
         //goes to new line and prints and moves cursor to next line
         System.out.println("\nNow, I am going to calculate the area of a circle");
         System.out.print("Enter the radius of the circle:"); //prints and leaves cursor on line
@@ -68,7 +68,7 @@ public class Assigment1 {
         //Multiplies the radius squared times PI and saves it as a variable
         double ac= (double) (radsquare* Math.PI);
         System.out.print("The area of the circle is:");//prints and leaves cursor on same line
-        System.out.printf("%.2f", ac);//prints the area of the circle to 2 decimals
+        System.out.printf("%,.2f", ac);//prints the area of the circle to 2 decimals
         //moves to a new line,prints ,and moves cursor to next line
         System.out.println("\nNow, I am going to calculate the Volume and the surface area of a cylinder");
         System.out.print("Enter the radius of the cylinder: ");//Prints and leaves cursor
@@ -81,14 +81,14 @@ public class Assigment1 {
         //multiplies the radius^2 times pi times height
         double heightpiradcylsquare=(piradcylsquare*heightcyl);
         System.out.print("The volume of the cylinder is: ");//prints
-        System.out.printf("%.2f", heightpiradcylsquare);//prints the volume to 2 decimals
+        System.out.printf("%,.2f", heightpiradcylsquare);//prints the volume to 2 decimals
         double piradcylheight=(float) (2*Math.PI*radcyl*heightcyl);//multiples pi*2*radius*height
         double piradcylsquaretwo= (piradcylsquare*2);//multiplies the radius^2 times pi*2
         //adds (pi*2*radius*height)with(radius^2 times pi*2)
         double sacyl=(piradcylsquaretwo+piradcylheight);
         //goes to a new line and prints
         System.out.print("\nThe Surface area of the cylinder is: ");
-        System.out.printf("%.2f", sacyl);//prints the surface area to 2 decimals
+        System.out.printf("%,.2f", sacyl);//prints the surface area to 2 decimals
         //goes to new line and prints
         System.out.println("\nNow, I am going to calculate the time it takes for a pendulum to swing a distance ");
         System.out.print("Enter the length of the pendulum in meters: ");//prints
@@ -100,7 +100,7 @@ public class Assigment1 {
         double p=(twopi*sqrt);//multiplies the square root of distance/gravity by pi*2
         //prints
         System.out.print("The time the pendulum takes to swing in seconds is: "+ " ");
-        System.out.printf("%.2f", p);//prints the time to 2 decimals
+        System.out.printf("%,.2f", p);//prints the time to 2 decimals
         System.out.print("\nThanks for using my calculator");//prints
     }
     
