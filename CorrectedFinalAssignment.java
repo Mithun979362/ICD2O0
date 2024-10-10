@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assigment1;
+package CorrectedFinalAssignment;
 import java.util.Scanner;
 import java.lang.Math.*;
 /*
@@ -13,7 +13,7 @@ Course: Grade 10 Comp Sci
 Title: Assignment 1
 Description: A program which outputs a series of numbers based on an algorithm.
 */
-public class finalassignment1 {
+public class CorrectedFinalAssignment {
     /* Variable dictionary
     Lengthrec-Length of rectangle
     Widthrec-Width of rectangle
