@@ -5,7 +5,7 @@ class Debugging_Assn_4 {
 
     String lastMonth = "August";
 
-    System.out.println("The last month was: " + lastMonth);
+    System.out.printf("The last month was %s.\n", lastMonth);
 
     //////////// End of tasks /////////////////////
   }
