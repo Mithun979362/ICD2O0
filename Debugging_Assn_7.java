@@ -18,7 +18,7 @@ public class Debugging_Assn_7 {
             
            } catch(ArithmeticException ae){
               
-            System.out.println("Please enter non zero integer");
+            System.out.println("invalid input");
             }
         } catch (Exception e) {
            System.out.println("Invalid input. Please enter a valid integer.");
