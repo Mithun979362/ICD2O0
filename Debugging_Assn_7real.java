@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Debugging_Assn_7 {
+public class Debugging_Assn_7real {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in); //open for keyboard input
         System.out.print("Enter an integer: ");
