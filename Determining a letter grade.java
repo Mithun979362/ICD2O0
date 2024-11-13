@@ -20,6 +20,9 @@ class Determining a letter grade {
         } else if (a >= 80 && a<=100) { 
             System.out.println(a + " Is a Letter grade of A.");
             System.out.println("Goodbye");
+        } else if (a > 100) { 
+            System.out.println("Invalid Input");
+           
         }
 
 
