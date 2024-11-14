@@ -5,7 +5,7 @@ class Determining a letter grade {
    Scanner kb = new Scanner(System.in); 
    System.out.println("Input your mark as a whole number(0-100)");
    int a = kb.nextInt();
-   if (a < 49) {
+   if (a <= 49) {
             System.out.println(a+ " is a Letter grade of F.");
             System.out.println("Goodbye");
         } else if (a >= 50 && a <= 59) { 
