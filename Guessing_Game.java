@@ -21,6 +21,6 @@ public class Guessing_Game {
       System.out.println("Good job guessing the number ");
     
     
-      }  // Yout code stops here!
+      }  // Your code stops here!
     }
 }
