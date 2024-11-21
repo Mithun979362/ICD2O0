@@ -18,11 +18,6 @@ public class Emoji {
                 System.out.print("\t"); 
             }
         }
-
-       
-        if (count % 8 != 0) {
-            System.out.println();
-        }
-        // Your code stops here!
+         // Your code stops here!
     }
 }
