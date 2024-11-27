@@ -1,46 +1,57 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javaapplication2;
 
-/**
- *
- * @author 979362
- */ import java.util.Scanner;
-public class assignment2 {
-  
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        Scanner kb = new Scanner(System.in);//declaring the scanner
-        String Redo = "y";
-        int maxnum=0;
-        int totalnum=0;
-     while (Redo=="y"){
-         System.out.println("Enter a whole number");
-         int c = kb.nextInt();
-         int c1=c;
-     while (c>=2){
-     if (c%2==0){
-         c=c/2;
-         totalnum=totalnum+1;
-     }else if (c%2!=0){
-         c=c*3/2;
-         totalnum=totalnum+1;
-     } 
-     }
-               
-               
-      System.out.println("The Collatz sequence for n = " + c1 + " is: " + c);     
-      System.out.println("Number of terms ="+c);
-    }
-     System.out.println("Do another? (y/n)");
-      Redo=kb.nextLine();
+public class JavaApplication2 {
     
-}
+   /*
+Mithun Kumar Arunkumar 979362
+Date: 27 November,2024
+Course: Grade 10 Com Sci
+Title: Collatz Conjecture 
+Description: A program which computes the collatz conjecture
+VARIABLE DICTIONARY: 
+  c (int) The numbers that are being subject to the collatz conjecture
+  c1 (int) remembers the beginning number
+  c2 (int) Remembers the greatest number of the conjecture
+  redo(string) Saves the users input to run the code or not
+*/
+
+    public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in); 
+        String redo = "y"; 
+
+        while (redo.equalsIgnoreCase("y")) { 
+            System.out.println("Enter a whole number:");
+            int c = kb.nextInt();
+            int c1 = c; 
+            int totalnum = 1; 
+            int c2 = c;
+
+            
+            System.out.print("The Collatz sequence for n = " + c1 + " is: " + c1);
+
+            while (c != 1) {
+                if (c % 2 == 0) {
+                    c = c / 2;
+                } else {
+                    c = c * 3 + 1; 
+                }
+                System.out.print(";" + c); 
+                totalnum++; 
+                if (c > c2) {
+                    c2 = c; 
+                }
+            }
+
+            System.out.println(); 
+            System.out.println("The number of terms = " + totalnum);
+            System.out.println("The highest value reached = " + c2);
+            System.out.println("Do another? (y/n)");
+            kb.nextLine(); 
+            redo = kb.nextLine(); 
+        }
+
+        kb.close();
+    }
 }
