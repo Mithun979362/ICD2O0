@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class JavaApplication2 {
     
-   /*
+/*
 Mithun Kumar Arunkumar 979362
 Date: 27 November,2024
 Course: Grade 10 Com Sci
 Title: Collatz Conjecture 
 Description: A program which computes the collatz conjecture
 VARIABLE DICTIONARY: 
-  c (int) The numbers that are being subject to the collatz conjecture
-  c1 (int) remembers the beginning number
-  c2 (int) Remembers the greatest number of the conjecture
-  redo(string) Saves the users input to run the code or not
+c (int) The numbers that are being subject to the collatz conjecture
+c1 (int) remembers the beginning number
+c2 (int) Remembers the greatest number of the conjecture
+redo(string) Saves the users input to run the code or not
 */
 
     public static void main(String[] args) {
