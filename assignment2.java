@@ -15,11 +15,11 @@ c (int) The numbers that are being subject to the collatz conjecture
 c1 (int) remembers the beginning number
 c2 (int) Remembers the greatest number of the conjecture
 redo(string) Saves the users input to run the code or not
-*/package javaapplication2;
+*/package assignment2;
 
 import java.util.Scanner;
 
-public class JavaApplication2 {
+public class assignment2 {
     
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);//declares scanner
