@@ -1,85 +1,60 @@
-
-package javaapplication3;
+package assignment2f;
 
 import java.util.Scanner;
 
-public class JavaApplication3 {
-    /*
+public class assignment2f {
+    
+/*
 Mithun Kumar Arunkumar 979362
-Date: 12 December,2024
+Date: 27 November,2024
 Course: Grade 10 Com Sci
-Title: Rock paper scissors
-Description: A program which plays a game of rock paper scissors
-    VARIABLE DICTIONARY: 
-pscore (int)player score
-cscore (int) computer score
-tiescore (int) number of ties
-totalround(int) total number of rounds players want to play
-num(string) User choice for rock paper or scissors
-numr(char) Char version of user choice for rock paper or scissors
-comp(int)Computer choice for rock paper or scissors
-compthing(char) Char version of computer choice for rock paper or scissors
-    */
+Title: Collatz Conjecture 
+Description: A program which computes the collatz conjecture
+VARIABLE DICTIONARY: 
+c (int) The numbers that are being subject to the collatz conjecture
+c1 (int) remembers the beginning number
+c2 (int) Remembers the greatest number of the conjecture
+redo(string) Saves the users input to run the code or not
+*/package assignment2f;
+
+import java.util.Scanner;
+
+public class assignment2f {
+    
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);//declares scanner
-        int pscore = 0; // Player score variable
-        int cscore = 0; // Computer score variable
-        int tiescore=0;//ties variable
-        
-        System.out.println("How many rounds of rock paper scissors do you want to play?");//prints
-        int totalround = kb.nextInt();//declares variable as user input
-        kb.nextLine(); // Consume the new line character after nextInt()
+        String redo = "y";//declares redo as y
 
-        while (totalround > 0) {//creates while loop that runs until totalround is greater than 0
-            System.out.println("Enter R for rock, P for paper, or S for scissors");//prints
-            String num = kb.nextLine().toUpperCase(); // Convert input to uppercase
-            char numr = num.charAt(0);//make input a char
-            
-            
-            int comp = (int) (3 * Math.random());//generates computer choice
-            char compthing;//declares compthing as char
-            if (comp == 0) {//if statement that runs if comp is equal to 0
-                compthing = 'R'; //declare compthing as R
-            } else if (comp == 1) {//else if that runs if comp is equal to 1
-                compthing = 'P';//declares compthing as P
-            } else {//runs if comp is equal to 2
-                compthing = 'S';//deckares compthing as S
+        while (redo.equalsIgnoreCase("y")) {
+            System.out.print("Enter a whole number: ");//prints 
+           
+            int initialValue = kb.nextInt();//declares initialvalues as user input
+            int currentValue = initialValue;//declares current value as initial value
+            int totalNum = 1;//declares totalnum to 1
+            int maxValue = initialValue;//declares max value as initial value
+
+            System.out.print("The Collatz sequence for n = " + String.format("%,d", initialValue) + " is " + String.format("%,d", initialValue));//prints and formats to thousand seperators
+
+            while (currentValue != 1) {//creats a while loop that runs while the current value is not 1
+                if (currentValue % 2 == 0) {//creats an if statement to run if the number is even
+                    currentValue = currentValue / 2;//divides that current value by 2
+                } else {//runs if number is odd
+                    currentValue = currentValue * 3 + 1;//multiplies number by 3 and adds 1
+                }
+                System.out.print("; " + String.format("%,d", currentValue)); //prints the current value with a thousand seperator
+                totalNum++;//adds 1 to the totalnumber
+                if (currentValue > maxValue) {//runs if the current is higher than the max
+                    maxValue = currentValue;//makes mak value equal to current value
+                }
             }
 
-            
-            System.out.println("Computer chose: " + compthing);//displays computers choice
-
-            // Determine the outcome
-            if (numr == compthing) {//runs if computer and user chooses same
-                System.out.println("It is a draw");//prints
-                tiescore++;//adds one to tie score
-            } else if ((numr == 'R' && compthing == 'S') ||//runs if player wins
-                       (numr == 'P' && compthing == 'R') ||
-                       (numr == 'S' && compthing == 'P')) {
-                System.out.println("The player wins");//prints
-                pscore++;//adds one to player score
-            } else {//runs if computer wins
-                System.out.println("The computer wins");//prints
-                cscore++;//adds one to computer score
-            }
-
-            totalround--; // subtracts one from the number of rounds
+            System.out.println();
+            System.out.println("The number of terms = " + String.format("%,d", totalNum)); //prints the number of terms
+            System.out.println("The highest value reached = " + String.format("%,d", maxValue)); //prints the max value
+            System.out.print("Do another? (y/n): ");//asks the user if they wanted to go again
+            redo = kb.next(); //declares redo as user input
         }
 
-        // Final results
-        System.out.println("Final Results:");//prints
-        System.out.println("Computer Score: " + cscore);//prints
-        System.out.println("Player Score: " + pscore);//prints
-        System.out.println("Ties: "+tiescore);//prints
-
-        if (cscore > pscore) {//runs if computer won more than player
-            System.out.println("The computer wins ");//prints
-        } else if (cscore == pscore) {//runs if it is a draw
-            System.out.println("It's a draw ");//prints
-        } else {//runs if player wins
-            System.out.println("The player wins ");//prints
-        }
-        
-        kb.close(); // Close the scanner
+        kb.close();
     }
 }
