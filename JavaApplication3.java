@@ -1,3 +1,6 @@
+
+package javaapplication3;
+
 import java.util.Scanner;
 
 public class JavaApplication3 {
@@ -51,11 +54,11 @@ public class JavaApplication3 {
         System.out.println("Player Score: " + pscore);
 
         if (cscore > pscore) {
-            System.out.println("The computer wins overall");
+            System.out.println("The computer wins ");
         } else if (cscore == pscore) {
-            System.out.println("It's a draw overall");
+            System.out.println("It's a draw ");
         } else {
-            System.out.println("The player wins overall");
+            System.out.println("The player wins ");
         }
         
         kb.close(); // Close the scanner to avoid resource leaks
