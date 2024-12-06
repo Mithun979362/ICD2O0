@@ -4,10 +4,17 @@ package javaapplication3;
 import java.util.Scanner;
 
 public class JavaApplication3 {
+    /*
+Mithun Kumar Arunkumar 979362
+Date: 12 December,2024
+Course: Grade 10 Com Sci
+Title: Rock paper scissors
+Description: A program which plays a game of rock paper scissors*/
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         int pscore = 0; // Player score
         int cscore = 0; // Computer score
+        int tiescore=0;//ties
         
         System.out.println("How many rounds of rock paper scissors do you want to play?");
         int totalround = kb.nextInt();
@@ -35,6 +42,7 @@ public class JavaApplication3 {
             // Determine the outcome
             if (numr == compthing) {
                 System.out.println("It is a draw");
+                tiescore++;
             } else if ((numr == 'R' && compthing == 'S') ||
                        (numr == 'P' && compthing == 'R') ||
                        (numr == 'S' && compthing == 'P')) {
@@ -52,6 +60,7 @@ public class JavaApplication3 {
         System.out.println("Final Results:");
         System.out.println("Computer Score: " + cscore);
         System.out.println("Player Score: " + pscore);
+        System.out.println("Ties: "+tiescore);
 
         if (cscore > pscore) {
             System.out.println("The computer wins ");
