@@ -1,75 +1,60 @@
-
-package javaapplication3;
+package assignment2f;
 
 import java.util.Scanner;
 
-public class JavaApplication3 {
-    /*
+public class assignment2f {
+    
+/*
 Mithun Kumar Arunkumar 979362
-Date: 12 December,2024
+Date: 27 November,2024
 Course: Grade 10 Com Sci
-Title: Rock paper scissors
-Description: A program which plays a game of rock paper scissors*/
+Title: Collatz Conjecture 
+Description: A program which computes the collatz conjecture
+VARIABLE DICTIONARY: 
+c (int) The numbers that are being subject to the collatz conjecture
+c1 (int) remembers the beginning number
+c2 (int) Remembers the greatest number of the conjecture
+redo(string) Saves the users input to run the code or not
+*/package assignment2f;
+
+import java.util.Scanner;
+
+public class assignment2f {
+    
     public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in);
-        int pscore = 0; // Player score
-        int cscore = 0; // Computer score
-        int tiescore=0;//ties
-        
-        System.out.println("How many rounds of rock paper scissors do you want to play?");
-        int totalround = kb.nextInt();
-        kb.nextLine(); // Consume the new line character after nextInt()
+        Scanner kb = new Scanner(System.in);//declares scanner
+        String redo = "y";//declares redo as y
 
-        while (totalround > 0) {
-            System.out.println("Enter R for rock, P for paper, or S for scissors");
-            String num = kb.nextLine().toUpperCase(); // Convert input to uppercase
-            char numr = num.charAt(0);
-            
-            // Generate computer choice
-            int comp = (int) (3 * Math.random());
-            char compthing;
-            if (comp == 0) {
-                compthing = 'R'; 
-            } else if (comp == 1) {
-                compthing = 'P';
-            } else {
-                compthing = 'S';
+        while (redo.equalsIgnoreCase("y")) {
+            System.out.print("Enter a whole number: ");//prints 
+           
+            int initialValue = kb.nextInt();//declares initialvalues as user input
+            int currentValue = initialValue;//declares current value as initial value
+            int totalNum = 1;//declares totalnum to 1
+            int maxValue = initialValue;//declares max value as initial value
+
+            System.out.print("The Collatz sequence for n = " + String.format("%,d", initialValue) + " is " + String.format("%,d", initialValue));//prints and formats to thousand seperators
+
+            while (currentValue != 1) {//creats a while loop that runs while the current value is not 1
+                if (currentValue % 2 == 0) {//creats an if statement to run if the number is even
+                    currentValue = currentValue / 2;//divides that current value by 2
+                } else {//runs if number is odd
+                    currentValue = currentValue * 3 + 1;//multiplies number by 3 and adds 1
+                }
+                System.out.print("; " + String.format("%,d", currentValue)); //prints the current value with a thousand seperator
+                totalNum++;//adds 1 to the totalnumber
+                if (currentValue > maxValue) {//runs if the current is higher than the max
+                    maxValue = currentValue;//makes mak value equal to current value
+                }
             }
 
-            // Display the choices
-            System.out.println("Computer chose: " + compthing);
-
-            // Determine the outcome
-            if (numr == compthing) {
-                System.out.println("It is a draw");
-                tiescore++;
-            } else if ((numr == 'R' && compthing == 'S') ||
-                       (numr == 'P' && compthing == 'R') ||
-                       (numr == 'S' && compthing == 'P')) {
-                System.out.println("The player wins");
-                pscore++;
-            } else {
-                System.out.println("The computer wins");
-                cscore++;
-            }
-
-            totalround--; // Decrement the number of rounds
+            System.out.println();
+            System.out.println("The number of terms = " + String.format("%,d", totalNum)); //prints the number of terms
+            System.out.println("The highest value reached = " + String.format("%,d", maxValue)); //prints the max value
+            System.out.print("Do another? (y/n): ");//asks the user if they wanted to go again
+            redo = kb.next(); //declares redo as user input
         }
 
-        // Final results
-        System.out.println("Final Results:");
-        System.out.println("Computer Score: " + cscore);
-        System.out.println("Player Score: " + pscore);
-        System.out.println("Ties: "+tiescore);
-
-        if (cscore > pscore) {
-            System.out.println("The computer wins ");
-        } else if (cscore == pscore) {
-            System.out.println("It's a draw ");
-        } else {
-            System.out.println("The player wins ");
-        }
-        
-        kb.close(); // Close the scanner to avoid resource leaks
+        kb.close();
     }
 }
